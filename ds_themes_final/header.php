@@ -6,19 +6,21 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, animi.</p>
+    
     <header>
         <section class="top_bar">
             <div class="logo">
                 Logo
             </div>
             <div class="searchbox">
-                Search
+                Search Box
             </div>
         </section>
         <section class="menu-area">
             <nav class="main-menu">
-                Menu
+                <?php wp_nav_menu(
+                    array('theme_location' => 'wp_devs_main_menu','depth' => 2)
+                );?>
             </nav>
 
         </section>
