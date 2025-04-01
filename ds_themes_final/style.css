@@ -1,49 +1,37 @@
 /*
-Theme Name: Twenty Twenty-Five
-Theme URI: 
-https://shkolladigjitale.com/
-
-Author: Drin 
-Author URI: 
-https://shkolladigjitale.com/
-
-Description: Twenty Twenty-Five emphasizes simplicity and adaptability. It offers flexible design options, supported by a variety of patterns for different page types, such as services and landing pages, making it ideal for building personal blogs, professional portfolios, online magazines, or business websites. Its templates cater to various blog styles, from text-focused to image-heavy layouts. Additionally, it supports international typography and diverse color palettes, ensuring accessibility and customization for users worldwide.
-Requires at least: 6.7
-Tested up to: 6.7
-Requires PHP: 7.2
+Theme Name: DS Theme Final
+Theme URI: https://website.com/wp-devs
+Author: Donika Pllana
+Author URI: https://website.com/wp-devs
+Description: This theme is for learning purposes only.
+Requires at least: 5.6
+Tested up to: 5.9
+Requires PHP: 8.0
 Version: 1.0
 License: GNU General Public License v2 or later
-License URI: 
-http://www.gnu.org/licenses/gpl-2.0.html
-
-Text Domain: twentytwentyfive
-Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wp-devs
+Tags: one-column, custom-menu, custom-logo, featured-images, translation-ready
 */
 
-/*
- * Link styles
- * 
-https://github.com/WordPress/gutenberg/issues/42319
-
- */
- /**
+/**
 1. Normalize
 2. Theme Specific CSS
 */
- 
- 
+
+
 /* 1. Normalize */
- 
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
- 
+
 /* Document
    ========================================================================== */
- 
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- 
+
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -383,12 +371,12 @@ https://github.com/WordPress/gutenberg/issues/42319
   [hidden] {
     display: none;
   }
- 
- 
+
+
 /* 2. Theme Specific CSS */
- 
+
 /* General */
- 
+
 :root{
     /* Measurements */
     --wpdevs-big-padding: 60px 0;
@@ -453,9 +441,9 @@ img {
     max-width: 100%;
     height: auto;
 }
- 
+
 /* Containers */
- 
+
 .container {
     width: 100%;
     margin-right: auto;
@@ -488,9 +476,9 @@ img {
         max-width: 1140px;
     }
 }
- 
+
 /************** HOME PAGE *****************/
- 
+
 /* Top Bar Section */
 .top-bar{ 
     background: #ffffff; 
@@ -520,11 +508,11 @@ img {
         justify-content: center;
     }
 }
- 
+
 /* Main Menu */
- 
+
 .menu-area {
-background: var( --wpdevs-gray2 );
+	background: var( --wpdevs-gray2 );
 }
 .main-menu {
     height: 55px;
@@ -591,8 +579,8 @@ background: var( --wpdevs-gray2 );
 }
 .menu-icon,
 .check-button {
-cursor: pointer;
-display: none;
+	cursor: pointer;
+	display: none;
 }
 .menu-icon .bar1, 
 .menu-icon .bar2, 
@@ -606,35 +594,35 @@ display: none;
 @media (max-width: 767px){
     .menu-icon,
     .check-button {
-display: block;
-}
+		display: block;
+	}
     .check-button{
         border: none;
         background: transparent;
         height: 55px;
     }
-.main-menu ul{
-position: absolute;
-width: 100%;
-background: #000000;
-left: -999px;
-text-align: left;
-transition: all cubic-bezier(.79,.14,.15,.86) .5s;
+	.main-menu ul{
+		position: absolute;
+		width: 100%;
+		background: #000000;
+		left: -999px;
+		text-align: left;
+		transition: all cubic-bezier(.79,.14,.15,.86) .5s;
         padding: 0;
         margin: 0;
         z-index: 1;
-}
+	}
     .main-menu ul:not(.sub-menu){
         margin-top: 55px;
     }
-.main-menu ul li{
-display: block;
-margin: 15px 0;
-line-height: 30px;
-}
-.main-menu ul li a {
-color: #FFFFFF;
-}
+	.main-menu ul li{
+		display: block;
+		margin: 15px 0;
+		line-height: 30px;
+	}
+	.main-menu ul li a {
+		color: #FFFFFF;
+	}
     .main-menu ul.sub-menu{
         position: relative;
         top: 0;
@@ -658,7 +646,7 @@ color: #FFFFFF;
         transform: rotate(45deg) translate(-7px, -7px);
     }
 } 
- 
+
 /* Hero */
 .hero{
     background-size: cover;
@@ -690,7 +678,7 @@ color: #FFFFFF;
     background: var( --wpdevs-yellow );
     transition: .5s all;
 }
- 
+
 /* Services */
 .services{ 
     background: var( --wpdevs-deep-blue ); 
@@ -740,7 +728,7 @@ color: #FFFFFF;
         max-width: 100%;
     }
 }
- 
+
 /* Home Blog */
 .home .home-blog{
     padding: var( --wpdevs-big-padding );
@@ -800,7 +788,7 @@ color: #FFFFFF;
         display: block;
     }
 }
- 
+
 /* Footer */
 footer{ 
     background: var( --wpdevs-deep-blue ); 
@@ -810,7 +798,7 @@ footer{
 footer .container .row{
     align-items: center;
 }
- 
+
 /* Footer - Footer Menu */
 .site-footer .container{
     display: flex;
@@ -849,9 +837,9 @@ footer .container .row{
         flex-wrap: wrap;
     }
 }
- 
+
 /************** INNER PAGES *****************/
- 
+
 /* Blog, Archive, Search */
 .blog main .container,
 .archive main .container{
@@ -970,7 +958,7 @@ article.post h5{
         flex-wrap: wrap;
     }
 }
- 
+
 /* Comments */
 #commentform input[type="submit"]{     
     color: #FFFFFF;
@@ -1001,7 +989,7 @@ article.post h5{
     border-top: 1px solid #ebebeb;
     padding: 20px 0 0;
 }
- 
+
 /* Pagination */
 .wpdevs-pagination{
     display: flex;
