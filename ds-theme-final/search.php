@@ -4,28 +4,18 @@
     <div id="main">
         <div class="container">
 
+        <h3>Search results for: <?php echo get_search_query(); ?></h3>
+
             <?php 
+
+            get_search_form();
+
             while( have_posts() ):
                 the_post();
-                ?>
-                <article id="post-<?php the_ID();?>" <?php post_class(); ?>>
-                    
-                    <header>
-                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                        <div class="meta-info">
-                            <p>Posted in <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
-                            <p>Categories: <?php the_category( ' ' ); ?></p>
-                            <p>Tags: <?php the_tags( '', ', ' ); ?></p>     
-                        </div>
-                    </header>
-                    <div class="content">
-                        <?php the_excerpt(); ?>
-                    </div>
-                </article>
-                <?php
+                get_template_part('parts/content', 'search'); 
             endwhile;
+            the_posts_pagination();
             ?>
-
         </div>
     </div>
 </div>

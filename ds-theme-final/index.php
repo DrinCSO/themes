@@ -11,19 +11,20 @@
                             <?php 
                                 if( have_posts() ):
                                     while( have_posts() ) : the_post();
-                                    ?>
-                                        <article>
-                                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array( 275, 275 ) ); ?></a>
-                                            <div class="meta-info">
-                                                <p>Posted in <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
-                                                <p>Categories: <?php the_category( ' ' ); ?></p>
-                                                <p>Tags: <?php the_tags( '', ', '); ?></p>
-                                            </div>
-                                            <?php the_excerpt(); ?>
-                                        </article>
-                                    <?php
+                                    get_template_part('parts/content');
+ 
                                     endwhile;
+                            ?>
+                                        <div class="wpdevs-pagination">
+                                            <div class = "pages new">
+                                                <?php previous_posts_link( "<< Newer posts"); ?>
+                                            </div>
+                                            <div class="pages old">
+                                                <?php next_posts_link("Older posts >>"); ?>
+                                            </div>
+                                        </div>
+
+                                    <?php
                                 else: ?>
                                     <p>Nothing yet to be displayed!</p>
                             <?php endif; ?>                                
