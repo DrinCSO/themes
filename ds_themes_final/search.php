@@ -4,7 +4,7 @@
     <div id="main">
         <div class="container">
 
-        <h3>Search results for: <?php echo get_search_query(); ?></h3>
+        <h3><?php esc_html_e ('Search results for:, wp-devs')?><?php echo get_search_query(); ?></h3>
 
             <?php 
 
